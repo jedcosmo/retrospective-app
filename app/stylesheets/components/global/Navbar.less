@@ -1,0 +1,140 @@
+.navbar{
+  .navbar-header {
+    width: 100%;
+    background: white;
+
+    a{
+      //color: #788286;
+      color: @main-retro-font-color;
+      font-family: @main-fonts-bold;
+      font-size: 16px;
+      padding-left: 40px;
+    }
+  }
+
+  .nav-header-details-category-lists{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #fff;
+    margin: 0 !important;
+
+    .project-name{
+      margin-top: 5px;
+      padding-left: 0 !important;
+    }
+
+    .nav-title{
+      font-size: 22px;
+      font-family: 'OpenSansBold';
+    }
+
+    .nav-retro-datails{
+      font-size: 20px;
+      font-family: @main-fonts-regular-italic;
+      text-transform: uppercase !important;
+      padding-left: 25px;
+
+      span{
+        &:nth-child(2){
+          padding-left: 32px;
+        }
+      }
+    }
+
+    .retro-wrapper{
+      padding: 0;
+
+      .retro-timer-end{
+        position: absolute;
+        height: 68px;
+        width: 85%;
+        margin-top: -15px;
+        background: rgba(255, 0, 0,0.5);
+        visibility: hidden;
+
+        @media only screen and (min-width: 1300px) and (max-width: 1600px){
+          width: 125%;
+          margin-left: -14px;
+        }
+      }
+
+      .retro-timer{
+        font-size: 24px;
+        font-family: @main-fonts-bold;
+        text-align: center;
+      }
+    }
+
+    .retro-numbers{
+      font-size: 13px;
+      font-family: @main-fonts-regular-italic;
+
+      p{
+        margin-bottom: 0px !important;
+      }
+
+      svg {
+        fill: #fff !important;
+        margin-left: 18px;
+      }
+
+      span{
+        &:first-child{
+          font-family: @main-fonts-bold;
+        }
+      }
+    }
+
+    .attendee-list {
+      padding: 10px 20px;
+      margin-top: 10px;
+      position: absolute;      
+      width: 100%;
+      top: 86%;
+      margin-left: -15px;
+      background: #f55757;
+      display: none;
+
+      .attendee-vote-count{
+        text-align: center;
+        padding-left: 0 !important;
+        
+        div{
+          font-family: 'OpenSansBold';
+          font-size: 15px;
+        }
+        
+        .user-name{
+          font-size: 12px;
+          
+          i{
+            border-radius: 50%;
+            background: #000;
+            padding: 2px 4px;
+            font-size: 10px;
+            font-style: normal;
+          }
+        }
+      }
+    }
+
+    .vote-wrapper{
+      text-align: center;
+
+      p{
+        margin-bottom: 0;
+      }
+
+      .vote-done{
+        font-family: @main-fonts-bold;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+
+      .vote-remaining{
+        font-size: 12px;
+      }
+    }
+  }
+
+}

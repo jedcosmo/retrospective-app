@@ -1,0 +1,230 @@
+.list-group-item{
+  height: 30vw;
+  background-color: #f6f6f6;
+  //-webkit-transition: all 1s ease; /* For Safari 3.1 to 6.0 */
+  //transition: all 1s ease;
+  padding: 40px;
+  overflow-y: auto;
+
+  &:first-child{
+    border: none;
+    border-bottom: medium solid #ebebeb;
+    border-right: medium solid #ebebeb;
+  }
+
+  &:nth-child(2){
+    border: none;
+    border-bottom: medium solid #ebebeb;
+  }
+
+  &:nth-child(3){
+    border: none;
+    border-right: medium solid #ebebeb;
+  }
+
+  &:last-child{
+    border: none;
+    margin-bottom: 80px;
+  }
+  .media {
+
+  }
+  .media-body{
+    height: 20vw;
+
+    .thoughts-container{
+
+      .create-thought-btn{
+        font-size: 40px;
+        background: none;
+        border: none;
+        opacity: 1;
+        margin-left: 15px;
+
+        &:hover{
+          opacity: 1;
+          color: lightgrey;
+        }
+
+        &:focus{
+          outline: none;
+        }
+
+        .glyphicon-plus-sign{
+          color: black;
+          font-size: 30px;
+        }
+      }
+
+      .expand-btn {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          font-size: 24px;
+      }
+
+      .thought-box{
+        //height: 130px;
+        padding-left: 1px;
+        padding-right: 0px;
+        margin-bottom: 10px;
+
+        .thought-wrapper {
+          padding: 10px;
+          border: 1px solid transparent;
+        }
+
+        .highlight {
+          border: 1px solid red;
+          background: pink;
+        }
+
+
+        .grouped {
+          position: absolute;
+          margin-top: -90px;
+          margin-left: 3%;
+          width: 83%;
+          z-index: -2;
+        }
+
+        .thought-inner-box{
+
+          .close{
+            position: relative;
+            top: 0px;
+            right: 5px;
+            opacity: 1;
+            &:focus{
+              outline: none;
+            }
+          }
+          .thought-input{
+            color: grey;
+            background-color: white;
+            outline: none;
+            border: none;
+            -webkit-box-shadow: 0px 3px 5px 1px rgba(173,173,173,1);
+            -moz-box-shadow: 0px 3px 5px 1px rgba(173,173,173,1);
+            box-shadow: 0px 3px 5px 1px rgba(173,173,173,1);
+            padding: 10px;
+
+            .thought-votes i {
+              cursor: pointer;
+            }
+
+            .thought-total-votes {
+              background: gray;
+              color: white;
+              font-size: 12px;
+              padding: 5px;
+            }
+
+            .white-bg {
+              color: white;
+            }
+
+            .red-bg {
+              color: #FA8B8B;
+            }
+
+            .thought-votes-count-wrap {
+              outline: none !important;
+            }
+
+            .thought-votes-count {
+              text-align: center;
+              color: #f55757;
+              font-size: 16px;
+              cursor: pointer;
+              outline: none !important;
+            }
+
+            .popover {
+              width: 60%;
+              top: 40% !important;
+              left: 15% !important;
+            }
+
+            .popover.left {
+              margin-left: 0px;
+            }
+
+            .popover-content {
+              padding: 0px;
+              div {
+              padding: 5%;
+              }
+            }
+
+
+
+            .thought-in-group:last-child {
+              border: none;
+            }
+
+            .thought-in-group {
+              margin-bottom: 3px;
+              border-bottom: 1px solid #adadad;
+            }
+
+            .ungroup-btn {
+              position: absolute;
+              right: 10px;
+              cursor: pointer;
+            }
+
+            .unclick {
+              pointer-events: none;
+            }
+
+          }
+
+          .thought-content {
+            height: 80px;
+            width: 100%;
+            border: none;
+            overflow-y: auto;
+            font-family: @main-fonts-light;
+            resize: none;
+
+            &:disabled {
+              background: none;
+            }
+
+            &:focus {
+              border: 1px solid pink;
+            }
+          }
+          .thought-content:focus {
+              outline: none;
+          }
+        }
+
+        .fa-3{
+          font-size: 40px;
+        }
+      }
+    }
+
+    .media-heading{
+      color: #000000;
+      font-family: @main-fonts-bold;
+      margin-bottom: 20px;
+
+    }
+
+  }
+}
+
+.full-view {
+  width: 100%;
+  height: 80vh;
+}
+
+.category-container {
+  height: 100%;
+}

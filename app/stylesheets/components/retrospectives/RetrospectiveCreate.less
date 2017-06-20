@@ -1,0 +1,129 @@
+/*
+  Created on : Mar 29, 2017, 7:58:19 PM
+  Author     : jdymosco
+*/
+.container {
+
+  .component-box {
+
+    .component-box-retro-info {
+      margin: 60px auto 0 auto;
+
+      h1 {
+        color: black;
+        font-family: @main-fonts-bold;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .component-inner-box-retro-info {
+        text-align: center;
+        background-color: white;
+        width: 60%;
+        margin: 0 auto;
+        height: 450px;
+        &:extend(.box-shadow);
+        margin-bottom: 70px;
+
+        button {
+          &:extend(.retro-default-btn);
+          margin-top: -30px;
+
+          &:hover {
+            &:extend(.retro-default-btn-hover);
+          }
+        }
+        .field-container {
+/*          position: relative;
+          left: -30px;*/
+          padding: 20px 180px 40px 180px !important;
+
+          span.has-error,
+          span.no-error {
+            font-size: 12px !important;
+            display: block;
+            position: initial;
+          }
+          span.has-error {
+            color: #f00;
+          }
+          span.no-error {
+            color: blue;
+          }
+          .field {
+            color: #252525;
+            display: block;
+            text-align: left;
+            width: 100%;
+
+            .help-block {
+              top: 0;
+              left: 0;
+              font-size: 11px;
+              margin-top: 5px;
+              margin-bottom: 0;
+            }
+            span.dummy {
+              color: transparent;
+            }
+            label {
+              position: relative;
+              left: 23px;
+              width: 100%;
+              font-size: 15px;
+              margin-bottom: 10px;
+              font-family: @main-fonts-bold;
+              text-transform: uppercase;
+              color: black;
+            }
+
+            .fa-caret-down{
+              float: right;
+              margin-top: 17px;
+              margin-right: 32px;
+            }
+
+            span.explaination{
+              color: lightgrey;
+              font-style: italic;
+            }
+            input[type="text"] {
+              &:extend(.retro-default-input);
+            }
+            select {
+              background: transparent;
+              border: 1px solid transparent;
+              border-bottom: 1px solid #000;
+              color: #000;
+              font-size: 18px;
+              webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              height: 40px;
+              width: 120px;
+            }
+          }
+          .field-optional {
+            display: inline-table;
+            width: 50%;
+
+            input[type="text"] {
+              width: 125px;
+            }
+          }
+        }
+
+        .bottomLink {
+          font-style: italic;
+          margin: 10px 0 20px 0;
+          position: relative;
+          bottom: -50px;
+          a {
+            font-style: normal;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

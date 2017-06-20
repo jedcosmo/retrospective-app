@@ -1,0 +1,26 @@
+version: '2'
+services:
+
+  mongo-test:
+    image: mongo:3.4.2
+    ports:
+      - '27017:27017'
+    logging:
+      driver: "none"
+
+  retro-app:
+    build: .
+    image: domandtom/retro-app
+    command: ./node_modules/mocha/bin/mocha --recursive 
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: test
+      MONGODB_URI: 'mongodb://mongo/retro-app'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/bower_components
+    restart: always
+    links:
+      - mongo-test:mongo

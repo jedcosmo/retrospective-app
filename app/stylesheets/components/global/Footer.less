@@ -1,0 +1,116 @@
+footer {
+  background-color: #262626;
+  bottom: 0px;
+  color: #fff;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+
+  @media only screen and (min-width: 1300px) and (max-width: 1600px){
+    display: inline-block;
+    position: initial;
+  }
+
+  &.is-admin{
+    display: inline-block;
+    position: initial;
+  }
+
+  .company-wrapper{
+
+    margin-top: 10px;
+
+    span{
+      font-family: @main-fonts-bold;
+      font-size: 16px;
+      padding-left: 15px;
+
+      .company-name{
+        color: @main-retro-font-color;
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  a {
+    color: #70726f;
+    text-decoration: underline;
+
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726f;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+
+    &:first-child {
+      border-left: 1px solid #70726F;
+    }
+  }
+
+  .social{
+    text-align: right;
+
+    a{
+      border-right: none !important;
+
+      &:first-child {
+        border-left: none !important;
+      }
+    }
+  }
+
+  .footer-btn{
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'OpenSansBold';
+    float: right;
+    text-decoration: none;
+    margin-right: 22px;
+    z-index: 100;
+    font-weight: 400;
+
+    &:hover{
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+  }
+
+  .footer-btn.spacer{
+    border: none;
+    color: transparent;
+  }
+
+  .thumb-md {
+    border: 1px solid rgba(255,255,255,.15);
+    transition: border .1s linear;
+
+    &:hover {
+      border-color: rgba(255,255,255,.3);
+    }
+  }
+
+  .user-finish-container {
+    text-align: right;
+    position: absolute;
+    width: 55%;    
+    margin-top: 5px; 
+    
+    .finished-votes-ctr{
+      font-size: 20px;
+      font-family: 'OpenSansBold';
+    }
+  }
+}

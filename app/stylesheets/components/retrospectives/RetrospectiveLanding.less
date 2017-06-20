@@ -1,0 +1,278 @@
+/*
+  Created on : Mar 29, 2017, 7:58:19 PM
+  Author     : jdymosco
+*/
+
+.container{
+
+  .component-wrapper {
+    width: 900px;
+    margin: 0 auto;
+
+    .component-header{
+
+      h1{
+        font-family: @main-fonts-bold;
+        color: black;
+      }
+
+      hr{
+        width: 20%;
+        border-top: 1px solid black;
+      }
+    }
+
+    .component-header, .component-body{
+      text-align: center;
+    }
+
+    .component-body{
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      margin-top: 60px;
+    }
+
+  }
+
+  .component-box {
+
+    margin-top: -40px;
+
+    .component-box-create, .component-box-join {
+      width: 460px;
+      height: 360px;
+      background-color: white;
+
+    }
+
+    .component-box-join{
+
+      float: left;
+      &:extend(.box-shadow);
+
+      h3{
+        text-align: center;
+        position: relative;
+        top: 30px;
+        font-family: @main-fonts-light;
+      }
+
+      .component-inner-box-join{
+
+        text-align: center;
+        margin-top: 80px;
+
+        .sub-title{
+           font-family: @main-fonts-bold;
+           color: black;
+           font-size: 15px;
+           text-transform: uppercase;
+
+        }
+
+        .has-error {
+          font-size: 12px !important;
+          color: #f00;
+          display: block;
+          position: initial;
+        }
+
+        input[type="text"]{
+          &:extend(.retro-default-input);
+        }
+
+        .create-retro-btn {
+          /* found in /global/variable.less */
+          &:extend(.retro-default-btn);
+
+          &:hover {
+            &:extend(.retro-default-btn-hover);
+          }
+        }
+      }
+    }
+
+    .divider {
+      font-size: 24px;
+      vertical-align: middle;
+      height: 360px;
+      width: 100%;
+      line-height: 360px;
+      font-family: @main-fonts-light;
+    }
+
+    .component-box-create{
+
+      float: right;
+      -webkit-box-shadow: 0 8px 6px -6px #788286;
+	   -moz-box-shadow: 0 8px 6px -6px #788286;
+	    box-shadow: 0 8px 6px -6px #788286;
+
+      margin-bottom: 100px;
+
+
+      h3{
+        text-align: center;
+        position: relative;
+        top: 30px;
+        font-family: @main-fonts-light;
+      }
+
+      .component-inner-box-create{
+
+        text-align: center;
+        margin-top: 80px;
+
+        .title {
+          font-family: @main-fonts-bold;
+          color: black;
+          font-size: 15px;
+          text-transform: uppercase;
+        }
+
+        .sub-title{
+            margin-bottom: 43px;
+            font-family: @main-fonts-regular-italic;
+            font-size: 20px;
+        }
+
+        .create-retro-btn{
+          /* Style is a little different because its a link not a button */
+          background: @navbar-default-link-hover-bg;
+          border: none;
+          padding: 12px 41px;
+          color: white;
+
+          text-transform: uppercase;
+
+          &:hover {
+            &:extend(.retro-default-btn-hover);
+          }
+        }
+      }
+    }
+
+
+    .component-box-room-code {
+      display: block;
+      float: left;
+      width: 40%;
+
+      h2 {
+        margin: 0 0 20px 0;
+      }
+      h3 {
+        left: 139px;
+        width: 178px;
+      }
+    }
+
+    .component-box-room-intro {
+      display: block;
+      float: right;
+      padding: 0 60px;
+      width: 60%;
+
+      h3 {
+        position: relative;
+        left: 0;
+        font-family: @main-fonts-bold;
+
+      }
+      .component-inner-box-intro {
+
+        p {
+
+        }
+      }
+    }
+
+    .component-box-room-code {
+      h3 {
+
+      }
+      .component-inner-box-room-code{
+        margin-top: 0px;
+
+        .title {
+          span {
+
+          }
+        }
+        .sub-title {
+
+          span.attendees_txt,
+          span.attendees_ctr {
+
+          }
+          span.attendees_ctr {
+          }
+          span.attendees_txt {
+
+          }
+        }
+      }
+    }
+    .component-box-retro-info {
+      clear: both;
+      display: block;
+      padding: 0 0 30px 0;
+      width: 100%;
+
+      h3 {
+        left: 37.5%;
+        width: 25%;
+      }
+      .component-inner-box-retro-info {
+
+        .title {
+          span {
+
+          }
+        }
+        .sub-title {
+          span.attendees_txt,
+          span.attendees_ctr {
+          }
+          span.attendees_ctr {
+          }
+          span.attendees_txt {
+
+          }
+        }
+        button {
+          &:hover {
+
+          }
+        }
+        .field-container {
+          padding: 10px 30% 40px 37.5%;
+
+          span.has-error,
+          span.no-error {
+          }
+          span.has-error {
+          }
+          span.no-error {
+          }
+          .field {
+
+            span {
+
+            }
+            span.dummy {
+            }
+            label {
+
+            }
+            input[type="text"] {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

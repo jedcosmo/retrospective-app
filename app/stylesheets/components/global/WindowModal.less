@@ -1,0 +1,394 @@
+.modal-backdrop{
+  background: rgba(0, 0, 0, 0.9) !important;
+  opacity: 0.9 !important;
+}
+
+.modal-dialog{
+  top: 0;
+}
+
+.modal-content{
+  background: #F2F2F2;
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-align: center;
+
+  .modal-column{
+    display: inline-table;
+    width: 50%;
+  }
+
+  .modal-column.join{
+    width: 40%;
+    padding-right: 25px;
+    padding-left: 40px;
+  }
+
+  .modal-column.introduce{
+    width: 60%;
+
+    .underline{
+      border-top: 2px solid black;
+      width: 15%;
+      margin: 0 auto;
+      padding-bottom: 25px
+    }
+
+    .buttons-introduce{
+      text-align: left;
+      text-align: left;
+      position: relative;
+      left: 60px;
+
+      .join-retro-btn{
+        .retro-modal-btn(@main-retro-font-color);
+        
+        &:hover{
+          background-color: #F2F2F2;
+          color: black;
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+
+  h2{
+    font-family: @main-fonts-bold;
+    color: black;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+
+  form.modal-box-introduce-form{
+    padding: 0 40px;
+    margin-top: -20px;
+
+    .join-retro-btn{
+      &:extend(.retro-default-btn);
+      margin-top: 40px;
+      margin-bottom: 10px;
+
+      &:hover{
+        background-color: #F2F2F2;
+        color: black;
+        border: 1px solid black;
+      }
+    }
+
+    .back-btn{
+      display: block;
+    }
+
+    .link{
+      text-decoration: none;
+      color: black;
+
+      .click-me{
+        color: @main-retro-font-color;
+        text-decoration: underline;
+      }
+    }
+
+
+  }
+
+  .modal-box-join-container{
+    position: absolute;
+    width: 35%;
+    top: 83px;
+
+    .modal-box-join{
+      border: 1px solid #939393;
+      height: 560px;
+
+      @media screen and (min-width: 1291px){
+        height: 510px;
+      }
+
+      width: 100%;
+      margin-top: -40px;
+
+      @media only screen and (min-width: 1300px) and (max-width: 1600px){
+        height: 510px !important;
+      }
+
+      h3.modal-header-join{
+        font-family: @main-fonts-light;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        font-size: 24px !important;
+      }
+
+      .modal-join-details{
+        .room-code-label{
+          font-size: 20px;
+          font-family: @main-fonts-bold;
+          color: #000;
+        }
+
+        .room-code{
+          font-size: 30px;
+          background: #f6f6f6;
+          padding: 5px 40px;
+          margin: 0 70px;
+          margin-top: 10px;
+        }
+
+        .modal-join-details-border{
+          height: 1px;
+          display: block;
+          border: 1px solid #939393;
+          width: 80%;
+          margin: 0 50px;
+          margin-top: 36px;
+          margin-bottom: 28px;
+        }
+
+        .modal-join-retro-edit{
+          text-align: left !important;
+          margin: 0 32px;
+
+          .retro-label{
+            font-size: 20px;
+            font-family: @main-fonts-regular-italic;
+            color: #000;
+          }
+
+          .project-values{
+            margin-top: 20px;
+
+            .retro-sprint{
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .buttons-retro{
+      text-align: right;
+      position: relative;
+      left: 90px;
+
+      button.save-close-retro{
+        .retro-modal-btn(@main-retro-default-color);
+        margin-top: 42px;
+        margin-bottom: -4px;
+        
+        &:hover{
+          background-color: #000;
+          color: #fff;
+          border: 1px solid #000;
+        }
+      }
+
+      button.close-without-saving{
+        color:@main-retro-font-color;
+        text-decoration: underline;
+        background: transparent;
+        border: none;
+        display: block;
+        position: relative;
+        left: 85%;
+        top: 5px;
+      }
+    }
+
+  }
+
+  .modal-box-introduce{
+    height: 210px;
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+    &:extend(.box-shadow);
+
+    h3.modal-header-introduce{
+      font-family: @main-fonts-light;
+      font-size: 32px !important;
+    }
+
+    input[type=text]{
+      &:extend(.retro-default-input);
+      width: 450px;
+    }
+
+    span.note{
+      display: block;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    span.has-error{
+      color: #ff0000;
+    }
+  }
+
+  p{
+    padding: 0 50px;
+    font-size: 20px;
+    line-height: 25px;
+    padding-bottom: 30px;
+  }
+}
+
+
+/* Admin Modal Large */
+.is-admin.modal-lg{
+  width: 90%;
+
+  @media only screen and (min-width: 1300px) and (max-width: 1600px){
+    width: 95%;
+  }
+
+  .modal-content{
+    padding-bottom: 40px;
+
+    .close-without-saving{
+      padding-top: 10px;
+    }
+  }
+
+  .modal-box-introduce{
+    h3.modal-header-introduce{
+      left: 80px;
+
+      @media only screen and (min-width: 1300px) and (max-width: 1600px){
+          left: 60px;
+      }
+    }    
+  }
+}
+
+
+
+/* User Modal Small */
+
+.modal-sm{
+  width: 40%;
+
+  @media only screen and (min-width: 1300px) and (max-width: 1600px){
+    width: 60%;
+  }
+}
+
+
+/* Admin Modal Small */
+.is-admin.modal-sm{
+  width: 40%;
+
+  @media only screen and (min-width: 1300px) and (max-width: 1600px){
+    width: 60%;
+  }
+
+  form.modal-attendees-start-form{
+    padding: 0 80px;
+
+    .modal-attendees-start{
+      width: 100%;
+      margin-top: 40px;
+
+      h3.modal-header-attendees-start{
+
+        @media only screen and (min-width: 1300px) and (max-width: 1600px){
+          left: 210px;
+        }
+
+        span{
+          display: block;
+          font-family: @main-fonts-regular-italic;
+
+          span{
+            display: inline-block;
+            padding-right: 10px;
+            color: #000;
+          }
+        }
+      }
+
+      .modal-attendees-start-inner{
+
+        ul{
+          margin: 0;
+          padding: 0 30px 50px 100px;
+          list-style: none;
+
+          li{
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+            padding-top: 16px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    button.start-retro-btn{
+      &:extend(.retro-default-btn);
+      margin-bottom: 30px;
+      
+      &:hover{
+        background-color: #F2F2F2;
+        color: black;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+.attendees-wrapper{
+
+  h2.attendees-title{
+    font-family: @main-fonts-light;
+    color: #939393;
+    text-transform: none;
+  }
+
+  .members-name{
+    padding: 8px;
+    
+    i{
+      border-radius: 50%;
+      background: #f55757;
+      padding: 2px 4px;
+      font-size: 10px;
+      font-style: normal;
+      color: #fff;
+    }
+  }
+
+  .retro-break-point{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid lightgray;
+  }
+}
+
+.attendee-intro{
+      height: 630px;
+  .underline{
+    border-top: 2px solid black;
+    width: 15%;
+    margin: 0 auto;
+    padding-bottom: 25px
+  }
+}
+
+.waiting-modal{
+  h2{
+    font-family: @main-fonts-light;
+    text-transform: none;
+    color: inherit;
+  }
+
+  img{
+    max-width: 10%;
+    margin: 25px 0;
+  }
+
+  p{
+    font-family: @main-fonts-light;
+  }
+}

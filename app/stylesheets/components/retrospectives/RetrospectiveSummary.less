@@ -1,0 +1,279 @@
+.navbar-default-summary{
+  background-color: #ffffff;
+    .navbar-summary{
+      position: relative;
+      min-height: 50px;
+      margin-left: 50px;
+      border: 1px solid transparent;
+      display: table;
+      div{
+        display: table-cell;
+        vertical-align: middle;
+        span.retrospective-title{
+          font-family: @main-fonts-bold;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #F55757;
+          padding-left: 5px;
+        }
+        span.application-title{
+          text-transform: uppercase;
+          font-family: @main-fonts-bold;
+          font-size: 16px;
+          color: #F55757;
+        }
+      }
+    }
+}
+.summary{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  
+  .thought-groups.cursor{
+    cursor: pointer;
+  }    
+
+  .row.summary-col{
+
+    padding: 50px;
+    background-color: #ffffff;
+    &:extend(.box-shadow);        
+  }
+  /* Retrospective Summary Title */
+  .row.summary-col .col-md-12 > [class=retro-summary]{
+    font-family: 'OswaldMedium';
+    font-size: 32px;
+    color: #262626;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+  .row-second{
+    width: 332px;
+    margin-right: 67px;
+    .col-project-name{
+      margin-bottom: 21px;
+      /* Project Name */
+      .retro-project-name{
+        font-family: @openSansRegular;
+        font-size: 20px;
+        color: #F55757;
+        line-height: 26px;
+        text-transform: capitalize;
+      }
+      /* Sprint Number */
+      .retro-sprint-number{
+        font-family: @openSansRegular;
+        font-size: 20px;
+        color: #F55757;
+        line-height: 26px;
+        text-transform: capitalize;
+        margin-left: 15px;
+      }
+    }
+    .col-project-date{
+      margin-bottom: 21px;
+      .retro-date-created{
+      font-family: 'OpenSansRegular';
+      font-size: 16px;
+      color: #788286;
+      line-height: 26px;
+      }
+      .retro-time-created{
+      font-family: 'OpenSansRegular';
+      font-size: 16px;
+      color: #788286;
+      line-height: 26px;
+      }
+    }
+    .col-project-attendees{
+      color: #262626;
+      margin-bottom: 10px;
+      .retro-project-fa-users{
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      .retro-project-attendees{
+        font-family: @main-fonts-bold;
+        font-size: 24px;
+        color: #262626;
+        text-transform: uppercase;
+      }
+    }
+    .col-list-attendees-1{
+      width: 126px;
+      div{
+        margin-bottom: 16px;
+      }
+    }
+    .col-list-attendees-2{
+      div{
+        margin-bottom: 16px;
+      }
+    }
+
+  }
+
+  /* Top Voted Thoughts */
+  .retro-top-voted-thoughts{
+    font-family: 'OpenSansBold';
+    font-size: 26px;
+    color: #F55757;
+    line-height: 26px;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 21px;
+  }
+
+  .col-no-votes {
+    font-family: @main-fonts-bold;
+    font-size: 24px;
+    color: #262626;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  .col-no-votes-list{
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .col-no-votes-list-number{
+    margin-left: 60px;
+    font-size: 20px;
+  }
+
+  .retro-fa-caret-right{
+    font-size: 18px;
+    color: #d6d6d6;
+    padding-right: 5px;
+  }
+
+  .bottom-button{
+    margin-top: 38px;
+  }
+
+  .buttons-introduce{
+    .join-retro-btn {
+      background: @main-retro-font-color;
+      border: none;
+      width: 210px;
+      height: 40px;
+      color: white;
+      text-transform: uppercase;
+
+      &:hover{
+        background: none;
+        color: @main-retro-font-color;
+        border: 1px solid @main-retro-font-color;
+      }
+    }
+  }
+
+  .buttons-retro{
+    .save-close-retro{
+      background: none;
+      border: 1px solid #f55757;
+      width: 210px;
+      height: 40px;
+      color: #f55757;
+      text-transform: uppercase;
+
+      &:hover{
+        background: @main-retro-font-color;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+
+
+
+  .summary-box{
+    border:2px solid black;
+    margin-top:30px;
+
+    h3{
+      text-align:center;
+      position:relative;
+      top:-13px;
+      margin:0 auto;
+      background:#f6f6f6;
+    }
+
+    .retro_summary{
+      width:380px;
+    }
+
+    .top_voted{
+      width:330px;
+    }
+
+    .content_box{
+      padding:2% 10%;
+    }
+
+    .title{
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    .datetime{
+      font-size:18px;
+    }
+
+    .attendee_header{
+      font-size:16px;
+      font-style:italic;
+    }
+
+    .attendee_counter{
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    .attendees{
+      font-size:18px;
+    }
+
+    .thought_headers{
+      font-style:italic;
+      font-size:16px;
+    }
+
+    .thought_group{
+      margin-top:2%;
+    }
+
+    .toggle_show_all{
+        display: none;
+    }
+
+    .show_all{
+      margin-top:2%;
+    }
+
+  }
+
+  .summary_download{
+    border:1px solid black;
+    padding:6px 20px;
+    color:#fff;
+    text-transform:uppercase;
+    background:#242424;
+  }
+
+  .summary_home{
+    border:1px solid black;
+    padding:6px 20px;
+    color:#000;
+    text-transform:uppercase;
+  }
+
+  .toggle_show_all{
+    display: none;
+  }
+
+  .show_all{
+    margin-top:2%;
+  }
+
+}

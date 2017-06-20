@@ -1,0 +1,38 @@
+version: '2'
+services:
+
+  mongo:
+    image: mongo:3.4.2
+    ports:
+      - '27017:27017'
+    logging:
+      driver: "none"
+
+  retro-app:
+    build: .
+    image: domandtom/retro-app
+    command: nodemon server.js
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: development
+      MONGODB_URI: 'mongodb://mongo/retro-app'
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/bower_components
+    restart: always
+    links:
+      - mongo
+
+  retro-app-frontend:
+    build: .
+    image: domandtom/retro-app-frontend
+    command: gulp
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/bower_components
+    restart: always
+    depends_on:
+      - retro-app
